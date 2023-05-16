@@ -29,4 +29,7 @@ Sea P(n) el tiempo de ejecución de partition()
   
 ### Análisis de la función quicksort() 
 
-k
+Sea  Q(n) es el tiempo de ejecución de quicksort()
+
+* Caso base, que sucede cuando la longitud del arreglo es menor igual que 1 y ejecuta dos operaciones elementales por lo que
+  $Q(n)=\left\{\begin{array}{cr}2 & \text{caso base}\\ \dotso & \dotso\end{array}\right.$
