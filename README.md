@@ -33,3 +33,10 @@ Sea  Q(n) es el tiempo de ejecución de quicksort()
 
 * Caso base, que sucede cuando la longitud del arreglo es menor igual que 1 y ejecuta dos operaciones elementales por lo que
   $Q(n)=\left\{\begin{array}{cr}2 & \text{caso base}\\ \dotso & \dotso\end{array}\right.$
+  
+ Ahora, la parte recursiva:
+         
+* El mejor caso está dado por
+  2 + 1 + P(n)_{\text{caso medio}} + 2Q(n/2) + 2 = 5 + P(n)+2Q(n)
+  Sucede cuando el arreglo se divide dos arreglos de la misma longitud
+  Obteniendo # Math:  Q(n)=\left\{\begin{array}{cr}2 & n\leq1\text{ caso base}\\ 5 + P(n)_{cm}+2Q(n) & n>1\text{ mejor caso}\end{array}\right.
