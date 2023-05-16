@@ -28,3 +28,5 @@ Sea P(n) el tiempo de ejecución de partition()
   Sucede cuando el pivote es el mayor valor del arreglo y en cada iteración se entra al condicional.
   
 ### Análisis de la función quicksort() 
+
+k
