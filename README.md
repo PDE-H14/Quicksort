@@ -21,8 +21,10 @@ Sea P(n) el tiempo de ejecución de partition()
 
 * Un caso medio está dado por
   $P(n) = 2 + \left(1+1+\sum^{n}{2 + 2 + \frac{2 + 3 + 2 + 2}{2}}\right) + 2 + 3 + 2 + 1 = 10 + 2 + \sum^{n}\frac{17}{2} = \frac{17}{2}n+12$
-  Sucede cuando el pivote ocupa una pocisión media y solo se compara con la mitad del arreglo, aplicamos piso een caso de que # Math: n = 2k+1
+  Sucede cuando el pivote ocupa una pocisión media y solo se compara con la mitad del arreglo, aplicamos piso en caso de que $n = 2k+1$.
 
 * El peor caso está dado por 
   $P(n) = 2 + \left(1+1+\sum^{n}{2 + 2 + 2 + 3 + 2 + 2}\right) + 2 + 3 + 2 + 1 = 10 + (2 + \sum^{n}13) = 13n+12$
   Sucede cuando el pivote es el mayor valor del arreglo y en cada iteración se entra al condicional.
+  
+### Análisis de la función quicksort() 
