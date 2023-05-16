@@ -32,11 +32,16 @@ Sea P(n) el tiempo de ejecución de partition()
 Sea  Q(n) es el tiempo de ejecución de quicksort()
 
 * Caso base, que sucede cuando la longitud del arreglo es menor igual que 1 y ejecuta dos operaciones elementales por lo que
-  $$Q(n)=\left\{\begin{array}{cr}2 & \text{caso base}\\ \dotso & \dotso\end{array}\right.$$
+  $Q(n)=\left\{\begin{array}{cr}2 & \text{caso base}\\ \dotso & \dotso\end{array}\right.$
   
  Ahora, la parte recursiva:
          
 * El mejor caso está dado por
   $2 + 1 + P(n)_{\text{caso medio}} + 2Q(n/2) + 2 = 5 + P(n)+2Q(n)$
   Sucede cuando el arreglo se divide dos arreglos de la misma longitud
-  Obteniendo $$Q(n)=\left\{\begin{array}{cr}2 & n\leq1\text{ caso base}\\ 5 + P(n)_{cm}+2Q(n) & n>1\text{ mejor caso}\end{array}\right.$$
+  Obteniendo $Q(n)=\left\{\begin{array}{cr}2 & n\leq1\text{ caso base}\\ 5 + P(n)_{cm}+2Q(n) & n>1\text{ mejor caso}\end{array}\right.$
+
+* El peor caso está dado por
+  $2 + 1 + P(n)_{\text{mejor o peor caso}} + Q(n-1) + Q(0) = 5 + P(n)_{pc} + Q(n-1)+Q(0)$
+  sucede cuado el pivote es el último o el primero, ocacionando que obtengamos un arreglo de $n-1$ elementos y un arreglo con un solo valor.
+  Obteniendo $Q(n)=\left\{\begin{array}{cr}2 & n\leq1\text{ caso base}\\ 5 + P(n)_{pc} + Q(n-1)+Q(0) & n>1\text{ peor caso}\end{array}\right.$
